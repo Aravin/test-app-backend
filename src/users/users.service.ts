@@ -26,7 +26,7 @@ export class UsersService {
     return this.users.find((user) => user.id === id);
   }
 
-  remove(id: string): User {
+  remove(id: string): User | null {
     const index = this.users.findIndex((user) => user.id === id);
     if (index === -1) {
       return null;
