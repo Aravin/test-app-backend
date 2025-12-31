@@ -28,7 +28,6 @@ The GraphQL playground will be available at `http://localhost:4000/graphql`
 - Query `users`: Get all users
 - Query `user(id: String!)`: Get a single user by ID
 - Mutation `createUser(createUserInput: CreateUserInput!)`: Create a new user
-- Mutation `deleteUser(id: String!)`: Delete a user by ID
 
 ## Scripts
 
