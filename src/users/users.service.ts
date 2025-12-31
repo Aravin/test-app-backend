@@ -25,5 +25,15 @@ export class UsersService {
   findOne(id: string): User {
     return this.users.find((user) => user.id === id);
   }
+
+  remove(id: string): User | null {
+    const index = this.users.findIndex((user) => user.id === id);
+    if (index === -1) {
+      return null;
+    }
+    const deletedUser = this.users[index];
+    this.users.splice(index, 1);
+    return deletedUser;
+  }
 }
 
