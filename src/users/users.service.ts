@@ -26,10 +26,10 @@ export class UsersService {
     return this.users.find((user) => user.id === id);
   }
 
-  delete(id: string): User {
+  delete(id: string): User | undefined {
     const userIndex = this.users.findIndex((user) => user.id === id);
     if (userIndex === -1) {
-      return null;
+      return undefined;
     }
     const deletedUser = this.users[userIndex];
     this.users.splice(userIndex, 1);
